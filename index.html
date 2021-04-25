@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasatiempos</title>
+    <link href="http://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
+    <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <div class="explicacion">
+        <p>Identifique la primera palabra y la última de cada bloque con las pistas que se dan. A continuación, trate de
+            descubrir las palabras intermedias. Para lograrlo, cambie una letra de la primera palabra para obtener la
+            próxima y, después, altere el orden de una o varias letras para encontrar la siguiente. Siga así,
+            sucesivamente, hasta que logre completar ambos casilleros. Todas las palabras intermedias deben tener
+            significado.
+        </p>
+    </div>
+    <div>
+        <button class="botonGuardarPalarbas" onclick="asignarPalabras()">Guardar palabras</button>
+    </div>
+    <div>
+        <button class="botonRecuperarPalabras" onclick="recuperarPalabras()">Recuperar palabras</button>
+    </div>
+    <div>
+        <button class="borrarGuardado" onclick="borrarPalabras()">Borrar guardado</button>
+    </div>
+    <div class="center">
+        <div>
+            <h1 id="tituloPasatiempos">Pasatiempo</h1>
+        </div>
+        <div class="linea">
+        </div>
+        <div class="pasatiempos">
+            <div class="bloquePequeño">
+                <div class="fila">
+                    <i class="lni lni-checkmark" id="check1"></i>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunction()" contenteditable="true"
+                        data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunction()" contenteditable="true"
+                        data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunction()" contenteditable="true"
+                        data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunction()" contenteditable="true"
+                        data-max-length="1"></div>
+                    <div id="numero1">1</div>
+                </div>
+
+                <div class="fila">
+                    <i class="lni lni-checkmark" id="check2"></i>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunctionDictionaryArriba()"
+                        contenteditable="true" data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunctionDictionaryArriba()"
+                        contenteditable="true" data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunctionDictionaryArriba()"
+                        contenteditable="true" data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunctionDictionaryArriba()"
+                        contenteditable="true" data-max-length="1"></div>
+                </div>
+                <div class="fila">
+                    <i class="lni lni-checkmark" id="check3"></i>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunctionDictionaryArriba()"
+                        contenteditable="true" data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunctionDictionaryArriba()"
+                        contenteditable="true" data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunctionDictionaryArriba()"
+                        contenteditable="true" data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunctionDictionaryArriba()"
+                        contenteditable="true" data-max-length="1"></div>
+                </div>
+                <div class="fila">
+                    <i class="lni lni-checkmark" id="check4"></i>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunctionDictionaryArriba()"
+                        contenteditable="true" data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunctionDictionaryArriba()"
+                        contenteditable="true" data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunctionDictionaryArriba()"
+                        contenteditable="true" data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunctionDictionaryArriba()"
+                        contenteditable="true" data-max-length="1"></div>
+                </div>
+                <div class="fila">
+                    <i class="lni lni-checkmark" id="check5"></i>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunctionDictionaryArriba()"
+                        contenteditable="true" data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunctionDictionaryArriba()"
+                        contenteditable="true" data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunctionDictionaryArriba()"
+                        contenteditable="true" data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunctionDictionaryArriba()"
+                        contenteditable="true" data-max-length="1"></div>
+                </div>
+                <div class="fila">
+                    <i class="lni lni-checkmark" id="check6"></i>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunction()" contenteditable="true"
+                        data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunction()" contenteditable="true"
+                        data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunction()" contenteditable="true"
+                        data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunction()" contenteditable="true"
+                        data-max-length="1"></div>
+                    <div contenteditable="true" id="numero2">2</div>
+
+                </div>
+            </div>
+            <div class="bloqueGrande">
+                <div class="fila fila1">
+                    <div id="numero3">3</div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunction()" contenteditable="true"
+                        data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunction()" contenteditable="true"
+                        data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunction()" contenteditable="true"
+                        data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunction()" contenteditable="true"
+                        data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunction()" contenteditable="true"
+                        data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunction()" contenteditable="true"
+                        data-max-length="1"></div>
+                    <i class="lni lni-checkmark" id="check7"></i>
+                </div>
+                <div class="fila">
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunctionDictionaryAbajo()"
+                        contenteditable="true" data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunctionDictionaryAbajo()"
+                        contenteditable="true" data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunctionDictionaryAbajo()"
+                        contenteditable="true" data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunctionDictionaryAbajo()"
+                        contenteditable="true" data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunctionDictionaryAbajo()"
+                        contenteditable="true" data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunctionDictionaryAbajo()"
+                        contenteditable="true" data-max-length="1"></div>
+                    <i class="lni lni-checkmark" id="check8"></i>
+                </div>
+                <div class="fila">
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunctionDictionaryAbajo()"
+                        contenteditable="true" data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunctionDictionaryAbajo()"
+                        contenteditable="true" data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunctionDictionaryAbajo()"
+                        contenteditable="true" data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunctionDictionaryAbajo()"
+                        contenteditable="true" data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunctionDictionaryAbajo()"
+                        contenteditable="true" data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunctionDictionaryAbajo()"
+                        contenteditable="true" data-max-length="1"></div>
+                    <i class="lni lni-checkmark" id="check9"></i>
+                </div>
+                <div class="fila">
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunctionDictionaryAbajo()"
+                        contenteditable="true" data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunctionDictionaryAbajo()"
+                        contenteditable="true" data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunctionDictionaryAbajo()"
+                        contenteditable="true" data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunctionDictionaryAbajo()"
+                        contenteditable="true" data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunctionDictionaryAbajo()"
+                        contenteditable="true" data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunctionDictionaryAbajo()"
+                        contenteditable="true" data-max-length="1"></div>
+                    <i class="lni lni-checkmark" id="check10"></i>
+                </div>
+                <div class="fila">
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunctionDictionaryAbajo()"
+                        contenteditable="true" data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunctionDictionaryAbajo()"
+                        contenteditable="true" data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunctionDictionaryAbajo()"
+                        contenteditable="true" data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunctionDictionaryAbajo()"
+                        contenteditable="true" data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunctionDictionaryAbajo()"
+                        contenteditable="true" data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunctionDictionaryAbajo()"
+                        contenteditable="true" data-max-length="1"></div>
+                    <i class="lni lni-checkmark" id="check11"></i>
+                </div>
+                <div class="fila">
+                    <div id="numero4">4</div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunction()" contenteditable="true"
+                        data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunction()" contenteditable="true"
+                        data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunction()" contenteditable="true"
+                        data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunction()" contenteditable="true"
+                        data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunction()" contenteditable="true"
+                        data-max-length="1"></div>
+                    <div class="content-editable-element cuadroPequeño" onblur="myFunction()" contenteditable="true"
+                        data-max-length="1"></div>
+                    <i class="lni lni-checkmark" id="check12"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="pistas">
+        <h2>1. Familia en Escocia.</h2>
+        <h2>2. Tristeza y dolor por algo.</h2>
+        <h2>3. Termino algo definitivamente.</h2>
+        <h2>4. El que torea.</h2>
+
+        <div id="alerta" style="visibility:hidden;">
+            <h5>La palabra introducida es errónea, pruebe con otra.</h5>
+        </div>
+
+        <div class="pedirPistas">
+            <button id="botonPedirPistas" onclick="botonPedirPistas()">Pedir pistas</button>
+        </div>
+
+        <div class="cuadrosPistas" style="visibility:hidden;">
+            <button onclick="cerrarPistas()" class="botonCerrarPistas">X</button>
+            <div class="cuadroPequeño content-editable-pista" contenteditable="true" data-max-length="1"></div>
+            <div class="cuadroPequeño content-editable-pista" contenteditable="true" data-max-length="1"></div>
+            <div class="cuadroPequeño content-editable-pista" contenteditable="true" data-max-length="1"></div>
+            <div class="cuadroPequeño content-editable-pista" contenteditable="true" data-max-length="1"></div>
+            <div class="cuadroPequeño content-editable-pista" contenteditable="true" data-max-length="1"></div>
+
+        </div>
+        <div class="mostrarTextoPistas" style="visibility:hidden;">
+            <button class="aceptarPistas" onclick="ofrecerPistas()">Dar pistas</button>
+            <p class="textoPistas">Escriba tres letras para conseguir una pista</p>
+
+        </div>
+
+    </div>
+
+
+
+    <script src="https://unpkg.com/maxlength-contenteditable@1.0.1/dist/maxlength-contenteditable.js"></script>
+
+    <script>
+        maxlengthContentEditableModule.maxlengthContentEditable();
+
+        var arrayCuadrados = document.getElementsByClassName("content-editable-element");
+        var arrayCuadradosPista = document.getElementsByClassName("content-editable-pista");
+
+        var arrayChecks = [];
+        var elemCheck1 = document.getElementById("check1");
+
+        var wordlist = [];
+
+        fetch("https://ordenalfabetix.unileon.es/aw/diccionario.txt")
+            .then(response => response.text())
+            .then(data => {
+                const re = /\b[\w']+(?:\s+[\w']+){0}/g;
+                wordList = data.match(re);
+            });
+
+
+        for (var i = 1; i <= 12; i++) {
+            arrayChecks.push(document.getElementById(`check${i}`));
+        }
+
+        var respuestas = ["clan", "pena", "remato", "torero"];
+
+
+        var stringVacio0=""
+        var stringVacio1=""
+        var stringVacio2=""
+        var stringVacio3=""
+        var stringVacio4=""
+        var stringVacio5=""
+        var stringVacio6=""
+        var stringVacio7=""
+        var stringVacio8=""
+        var stringVacio9=""
+        var stringVacio10=""
+        var stringVacio11=""
+
+        function myFunction() {
+
+            for (var i = 0; i < arrayCuadrados.length; i++) {
+                stringVacio0 = arrayCuadrados[0].innerHTML + arrayCuadrados[1].innerHTML + arrayCuadrados[2].innerHTML + arrayCuadrados[3].innerHTML;
+                stringVacio5 = arrayCuadrados[20].innerHTML + arrayCuadrados[21].innerHTML + arrayCuadrados[22].innerHTML + arrayCuadrados[23].innerHTML;
+                stringVacio6 = arrayCuadrados[24].innerHTML + arrayCuadrados[25].innerHTML + arrayCuadrados[26].innerHTML + arrayCuadrados[27].innerHTML + arrayCuadrados[28].innerHTML + arrayCuadrados[29].innerHTML;
+                stringVacio11 = arrayCuadrados[54].innerHTML + arrayCuadrados[55].innerHTML + arrayCuadrados[56].innerHTML + arrayCuadrados[57].innerHTML + arrayCuadrados[58].innerHTML + arrayCuadrados[59].innerHTML;
+                
+                
+                //primeraPalabra clan
+                if (stringVacio0.toLowerCase() == respuestas[0] && stringVacio0.length == 4) {
+                    arrayChecks[0].style.visibility = "visible";
+                    document.getElementById("alerta").style.visibility = "hidden";
+                } else if (stringVacio0.toLowerCase() != respuestas[0] && stringVacio0.length == 4) {
+                    arrayChecks[0].style.visibility = "hidden";
+                    document.getElementById("alerta").style.visibility = "visible";
+                }
+
+                //segundaPalabra pena 
+                if (stringVacio5.toLowerCase() == respuestas[1] && stringVacio5.length == 4) {
+                    arrayChecks[5].style.visibility = "visible";
+                    document.getElementById("alerta").style.visibility = "hidden";
+                } else if (stringVacio5.toLowerCase() != respuestas[1] && stringVacio5.length == 4) {
+                    arrayChecks[5].style.visibility = "hidden";
+                    document.getElementById("alerta").style.visibility = "visible";
+                }
+
+
+                //terceraPalabra acabar
+                if (stringVacio6.toLowerCase() == respuestas[2] && stringVacio6.length == 6) {
+                    arrayChecks[6].style.visibility = "visible";
+                    document.getElementById("alerta").style.visibility = "hidden";
+                } else if (stringVacio6.toLowerCase() != respuestas[3] && stringVacio6.length == 6) {
+                    arrayChecks[6].style.visibility = "hidden";
+                    document.getElementById("alerta").style.visibility = "visible";
+                }
+
+                //cuartaPalabra torero
+                if (stringVacio11.toLowerCase() == respuestas[3] && stringVacio11.length == 6) {
+                    arrayChecks[11].style.visibility = "visible";
+                    document.getElementById("alerta").style.visibility = "hidden";
+                } else if (stringVacio11.toLowerCase() != respuestas[3] && stringVacio11.length == 6) {
+                    arrayChecks[11].style.visibility = "hidden";
+                    document.getElementById("alerta").style.visibility = "visible";
+                }
+                
+            }
+            
+            
+        }
+        
+        function myFunctionDictionaryArriba() {
+            
+            stringVacio1 = arrayCuadrados[4].innerHTML + arrayCuadrados[5].innerHTML + arrayCuadrados[6].innerHTML + arrayCuadrados[7].innerHTML;
+            stringVacio2 = arrayCuadrados[8].innerHTML + arrayCuadrados[9].innerHTML + arrayCuadrados[10].innerHTML + arrayCuadrados[11].innerHTML;
+            stringVacio3 = arrayCuadrados[12].innerHTML + arrayCuadrados[13].innerHTML + arrayCuadrados[14].innerHTML + arrayCuadrados[15].innerHTML;
+            stringVacio4 = arrayCuadrados[16].innerHTML + arrayCuadrados[17].innerHTML + arrayCuadrados[18].innerHTML + arrayCuadrados[19].innerHTML;
+            var inc2 = wordList.includes(stringVacio1.toLowerCase());
+            var inc3 = wordList.includes(stringVacio2.toLowerCase());
+            var inc4 = wordList.includes(stringVacio3.toLowerCase());
+            var inc5 = wordList.includes(stringVacio4.toLowerCase());
+
+
+            for (var i = 0; i < arrayCuadrados.length; i++) {
+
+
+                if (inc2 && stringVacio1.length == 4) {
+                    let correct = compareStrings(stringVacio1, respuestas[0]);
+                    if (correct) {
+                        arrayChecks[1].style.visibility = "visible";
+                        document.getElementById("alerta").style.visibility = "hidden";
+                    }
+                } else if (!inc2 && stringVacio1.length == 4) {
+                    document.getElementById("alerta").style.visibility = "visible";
+                    arrayChecks[1].style.visibility = "hidden";
+
+                }
+
+                if (inc3 && stringVacio2.length == 4) {
+                    let correct = compareStrings(stringVacio2, stringVacio1);
+                    if (correct) {
+                        arrayChecks[2].style.visibility = "visible";
+                        document.getElementById("alerta").style.visibility = "hidden";
+                    }
+
+                } else if (!inc3 && stringVacio2.length == 4) {
+                    document.getElementById("alerta").style.visibility = "visible";
+                    arrayChecks[2].style.visibility = "hidden";
+                }
+
+                if (inc4 && stringVacio3.length == 4) {
+                    let correct = compareStrings(stringVacio3, stringVacio2);
+                    if (correct) {
+                        arrayChecks[3].style.visibility = "visible";
+                        document.getElementById("alerta").style.visibility = "hidden";
+
+                    }
+                } else if (!inc4 && stringVacio3.length == 4) {
+                    document.getElementById("alerta").style.visibility = "visible";
+                    arrayChecks[3].style.visibility = "hidden";
+
+                }
+
+                if (inc5 && stringVacio4.length == 4) {
+
+                    let correct = compareStrings(stringVacio4, stringVacio3);
+                    let correct2 = compareStrings(stringVacio4, respuestas[1]);
+
+                    if (correct && correct2) {
+                        arrayChecks[4].style.visibility = "visible";
+                        document.getElementById("alerta").style.visibility = "hidden";
+
+                    } else {
+                        document.getElementById("alerta").style.visibility = "visible";
+                        arrayChecks[4].style.visibility = "hidden";
+                    }
+
+                } else if (!inc5 && stringVacio4.length == 4) {
+                    document.getElementById("alerta").style.visibility = "visible";
+                    arrayChecks[4].style.visibility = "hidden";
+
+                }
+
+
+            }
+        }
+
+        function myFunctionDictionaryAbajo() {
+
+            stringVacio8 = arrayCuadrados[30].innerHTML + arrayCuadrados[31].innerHTML + arrayCuadrados[32].innerHTML + arrayCuadrados[33].innerHTML + arrayCuadrados[34].innerHTML + arrayCuadrados[35].innerHTML;
+            stringVacio9 = arrayCuadrados[36].innerHTML + arrayCuadrados[37].innerHTML + arrayCuadrados[38].innerHTML + arrayCuadrados[39].innerHTML + arrayCuadrados[40].innerHTML + arrayCuadrados[41].innerHTML;
+            stringVacio10 = arrayCuadrados[42].innerHTML + arrayCuadrados[43].innerHTML + arrayCuadrados[44].innerHTML + arrayCuadrados[45].innerHTML + arrayCuadrados[46].innerHTML + arrayCuadrados[47].innerHTML;
+            stringVacio11 = arrayCuadrados[48].innerHTML + arrayCuadrados[49].innerHTML + arrayCuadrados[50].innerHTML + arrayCuadrados[51].innerHTML + arrayCuadrados[52].innerHTML + arrayCuadrados[53].innerHTML;
+            stringVacio12 = arrayCuadrados[54].innerHTML + arrayCuadrados[55].innerHTML + arrayCuadrados[56].innerHTML + arrayCuadrados[57].innerHTML + arrayCuadrados[58].innerHTML + arrayCuadrados[59].innerHTML;
+
+            var inc8 = wordList.includes(stringVacio8.toLowerCase());
+            var inc9 = wordList.includes(stringVacio9.toLowerCase());
+            var inc10 = wordList.includes(stringVacio10.toLowerCase());
+            var inc11 = wordList.includes(stringVacio11.toLowerCase());
+
+            for (var i = 0; i < arrayCuadrados.length; i++) {
+
+
+                if (inc8 && stringVacio8.length == 6) {
+                    let correct = compareStrings(stringVacio8, respuestas[2]);
+                    if (correct) {
+                        arrayChecks[7].style.visibility = "visible";
+                        document.getElementById("alerta").style.visibility = "hidden";
+                    }
+                } else if (!inc8 && stringVacio8.length == 6) {
+                    document.getElementById("alerta").style.visibility = "visible";
+                    arrayChecks[7].style.visibility = "hidden";
+                }
+
+                if (inc9 && stringVacio9.length == 6) {
+                    let correct = compareStrings(stringVacio9, stringVacio8);
+                    if (correct) {
+                        arrayChecks[8].style.visibility = "visible";
+                        document.getElementById("alerta").style.visibility = "hidden";
+                    }
+                } else if (!inc9 && stringVacio9.length == 6) {
+                    document.getElementById("alerta").style.visibility = "visible";
+                    arrayChecks[8].style.visibility = "hidden";
+                }
+
+                if (inc10 && stringVacio10.length == 6) {
+                    let correct = compareStrings(stringVacio10, stringVacio9);
+                    if (correct) {
+                        arrayChecks[9].style.visibility = "visible";
+                        document.getElementById("alerta").style.visibility = "hidden";
+                    }
+                } else if (!inc10 && stringVacio10.length == 6) {
+                    document.getElementById("alerta").style.visibility = "visible";
+                    arrayChecks[9].style.visibility = "hidden";
+                }
+
+                if (inc11 && stringVacio11.length == 6) {
+
+                    let correct = compareStrings(stringVacio11, stringVacio10);
+                    let correct2 = compareStrings(stringVacio11, respuestas[3]);
+
+                    if (correct && correct2) {
+                        arrayChecks[10].style.visibility = "visible";
+                        document.getElementById("alerta").style.visibility = "hidden";
+
+                    } else {
+                        document.getElementById("alerta").style.visibility = "visible";
+                        arrayChecks[10].style.visibility = "hidden";
+                    }
+
+                } else if (!inc11 && stringVacio11.length == 6) {
+                    document.getElementById("alerta").style.visibility = "visible";
+                    arrayChecks[10].style.visibility = "hidden";
+
+                }
+
+                /* if(inc9 && stringVacio9.length==6){
+                    console.log("conseguido9");
+                    arrayChecks[8].style.visibility="visible";
+                    stringVacio9=stringVacio9.substring(0,0);
+    
+                }
+                if(inc10 && stringVacio10.length==6){
+                    console.log("conseguido10");
+                    arrayChecks[9].style.visibility="visible";
+                    stringVacio10=stringVacio10.substring(0,0);
+    
+                }
+                if(inc11 && stringVacio11.length==6){
+                    console.log("conseguido11");
+                    arrayChecks[10].style.visibility="visible";
+                    stringVacio11=stringVacio11.substring(0,0);
+    
+                } */
+
+
+            }
+        }
+
+        function compareStrings(str1, str2) {
+
+
+            str1 = str1.split('');
+            str2 = str2.split('');
+            str1.sort();
+            str2.sort();
+
+            if (str1.length != str2.length)
+                return false;
+            var differences = 0;
+            for (var i = 0; i < str1.length; i++) {
+                if (str1[i] != str2[i])
+                    if (!str2.includes(str1[i])) {
+                        if (++differences > 1) {
+                            return false;
+                        }
+                    }
+            }
+            return true;
+        }
+
+        
+        //local storage
+
+        const storage = window.localStorage;
+
+        function asignarPalabras(){
+
+            for(var i=0;i<arrayCuadrados.length;i++){
+                storage.setItem(`letra${i}`,arrayCuadrados[`${i}`].innerHTML)
+            }
+        }
+
+        function recuperarPalabras(){
+
+            for(var i=0;i<arrayCuadrados.length;i++){
+                var letra = storage.getItem(`letra${i}`);
+                if(letra.length>0){
+                    arrayCuadrados[`${i}`].innerHTML=letra
+                }else{
+                    arrayCuadrados[`${i}`].innerHTML=""
+                }
+            }
+
+            //se vuelven a recorrer las funciones para que los checks se pongan
+            myFunction();
+            myFunctionDictionaryArriba();
+            myFunctionDictionaryAbajo();
+
+        }
+    
+        function borrarPalabras(){
+            storage.clear();
+        }
+
+
+
+        function botonPedirPistas() {
+
+            document.getElementsByClassName("cuadrosPistas")[0].style.visibility = "visible";
+            document.getElementById("botonPedirPistas").style.display = "none";
+            document.getElementsByClassName("mostrarTextoPistas")[0].style.visibility = "visible";
+
+            escribirTextoPista();
+
+        }
+
+        function ofrecerPistas() {
+            if (arrayCuadradosPista[0].innerHTML.length > 0 || arrayCuadradosPista[1].innerHTML.length > 0 || arrayCuadradosPista[2].innerHTML.length > 0 || arrayCuadradosPista[3].innerHTML.length > 0 || arrayCuadradosPista[4].innerHTML.length > 0) {
+                document.getElementsByClassName("textoPistas")[0].style.visibility = "hidden";
+                tratarArray();
+            }
+
+        }
+        function tratarArray() {
+            var stringPista = arrayCuadradosPista[0].innerHTML + arrayCuadradosPista[1].innerHTML + arrayCuadradosPista[2].innerHTML + arrayCuadradosPista[3].innerHTML + arrayCuadradosPista[4].innerHTML;
+            console.log(stringPista);
+            console.log(typeof (stringPista));
+        }
+
+        function escribirTextoPista() {
+            document.getElementsByClassName("textoPistas")[0].style.color = "black";
+            document.getElementsByClassName("textoPistas")[0].style.visibility = "visible";
+            document.getElementsByClassName("textoPistas")[0].innerText = "Escriba letras para conseguir una pista";
+        }
+
+
+        function cerrarPistas() {
+            document.getElementsByClassName("cuadrosPistas")[0].style.visibility = "hidden";
+            document.getElementById("botonPedirPistas").style.display = "block";
+            document.getElementsByClassName("mostrarTextoPistas")[0].style.visibility = "hidden";
+            document.getElementsByClassName("textoPistas")[0].innerText = "Escriba letras para conseguir una pista";
+            document.getElementsByClassName("textoPistas")[0].style.visibility = "hidden";
+        }
+
+
+    //TODO function guardarSesion()
+    </script>
+
+
+
+</body>
+
+</html>
