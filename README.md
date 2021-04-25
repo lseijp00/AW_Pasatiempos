@@ -17,6 +17,5 @@ CAMBIO EN LAS ESPECIFICACIONES: El diccionario se deberá cargar desde  la direc
 
 Para realizar la petición asíncronada se deberá de tener en cuenta que será una petición CORS (https://developer.mozilla.org/es/docs/Web/HTTP/CORS). Para llevarla a cabo correctamente se debe de tener en cuenta:
 
-La página html tiene que tener el atributo global crossorigin="anonymous" (https://developer.mozilla.org/es/docs/Web/HTML/Attributes/crossorigin)
-
-La petición debe ser simple o segura, según la definición que puede verse en este enlace (https://javascript.info/fetch-crossorigin)
+* La página html tiene que tener el atributo global crossorigin="anonymous" (https://developer.mozilla.org/es/docs/Web/HTML/Attributes/crossorigin)
+* La petición debe ser simple o segura, según la definición que puede verse en este enlace (https://javascript.info/fetch-crossorigin)
