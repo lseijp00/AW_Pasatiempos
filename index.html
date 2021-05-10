@@ -199,6 +199,7 @@
                         data-max-length="1"></div>
                     <div class="content-editable-element cuadroPequeño" onblur="myFunction()" contenteditable="true"
                         data-max-length="1"></div>
+
                     <i class="lni lni-checkmark" id="check12"></i>
                 </div>
             </div>
@@ -226,16 +227,36 @@
             <div class="cuadroPequeño content-editable-pista" contenteditable="true" data-max-length="1"></div>
             <div class="cuadroPequeño content-editable-pista" contenteditable="true" data-max-length="1"></div>
             <div class="cuadroPequeño content-editable-pista" contenteditable="true" data-max-length="1"></div>
+            <div class="cuadroPequeño content-editable-pista" contenteditable="true" data-max-length="1"></div>
 
         </div>
         <div class="mostrarTextoPistas" style="visibility:hidden;">
-            <button class="aceptarPistas" onclick="ofrecerPistas()">Dar pistas</button>
+            <p id="contadorPistas">0/3</p>
+            <button class="aceptarPistas" id="myBtn" onclick="ofrecerPistas()">Dar pistas</button>
             <p class="textoPistas">Escriba tres letras para conseguir una pista</p>
 
         </div>
 
+
+
     </div>
 
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Palabras acordes a la búsqueda</h2>
+            <div id="contenedorPalabrasPista">
+
+            </div>
+
+
+        </div>
+
+    </div>
 
 
     <script src="https://unpkg.com/maxlength-contenteditable@1.0.1/dist/maxlength-contenteditable.js"></script>
@@ -249,14 +270,20 @@
         var arrayChecks = [];
         var elemCheck1 = document.getElementById("check1");
 
-        var wordlist = [];
+
+
+
+        const arr = [];
+        var wordList = [];
 
         fetch("https://ordenalfabetix.unileon.es/aw/diccionario.txt")
             .then(response => response.text())
             .then(data => {
-                const re = /\b[\w']+(?:\s+[\w']+){0}/g;
+                const re = /\b[\w']+(\s[\w'] | ){0}/g;
                 wordList = data.match(re);
             });
+
+
 
 
         for (var i = 1; i <= 12; i++) {
@@ -266,18 +293,18 @@
         var respuestas = ["clan", "pena", "remato", "torero"];
 
 
-        var stringVacio0=""
-        var stringVacio1=""
-        var stringVacio2=""
-        var stringVacio3=""
-        var stringVacio4=""
-        var stringVacio5=""
-        var stringVacio6=""
-        var stringVacio7=""
-        var stringVacio8=""
-        var stringVacio9=""
-        var stringVacio10=""
-        var stringVacio11=""
+        var stringVacio0 = ""
+        var stringVacio1 = ""
+        var stringVacio2 = ""
+        var stringVacio3 = ""
+        var stringVacio4 = ""
+        var stringVacio5 = ""
+        var stringVacio6 = ""
+        var stringVacio7 = ""
+        var stringVacio8 = ""
+        var stringVacio9 = ""
+        var stringVacio10 = ""
+        var stringVacio11 = ""
 
         function myFunction() {
 
@@ -286,8 +313,8 @@
                 stringVacio5 = arrayCuadrados[20].innerHTML + arrayCuadrados[21].innerHTML + arrayCuadrados[22].innerHTML + arrayCuadrados[23].innerHTML;
                 stringVacio6 = arrayCuadrados[24].innerHTML + arrayCuadrados[25].innerHTML + arrayCuadrados[26].innerHTML + arrayCuadrados[27].innerHTML + arrayCuadrados[28].innerHTML + arrayCuadrados[29].innerHTML;
                 stringVacio11 = arrayCuadrados[54].innerHTML + arrayCuadrados[55].innerHTML + arrayCuadrados[56].innerHTML + arrayCuadrados[57].innerHTML + arrayCuadrados[58].innerHTML + arrayCuadrados[59].innerHTML;
-                
-                
+
+
                 //primeraPalabra clan
                 if (stringVacio0.toLowerCase() == respuestas[0] && stringVacio0.length == 4) {
                     arrayChecks[0].style.visibility = "visible";
@@ -324,14 +351,14 @@
                     arrayChecks[11].style.visibility = "hidden";
                     document.getElementById("alerta").style.visibility = "visible";
                 }
-                
+
             }
-            
-            
+
+
         }
-        
+
         function myFunctionDictionaryArriba() {
-            
+
             stringVacio1 = arrayCuadrados[4].innerHTML + arrayCuadrados[5].innerHTML + arrayCuadrados[6].innerHTML + arrayCuadrados[7].innerHTML;
             stringVacio2 = arrayCuadrados[8].innerHTML + arrayCuadrados[9].innerHTML + arrayCuadrados[10].innerHTML + arrayCuadrados[11].innerHTML;
             stringVacio3 = arrayCuadrados[12].innerHTML + arrayCuadrados[13].innerHTML + arrayCuadrados[14].innerHTML + arrayCuadrados[15].innerHTML;
@@ -520,26 +547,26 @@
             return true;
         }
 
-        
+
         //local storage
 
         const storage = window.localStorage;
 
-        function asignarPalabras(){
+        function asignarPalabras() {
 
-            for(var i=0;i<arrayCuadrados.length;i++){
-                storage.setItem(`letra${i}`,arrayCuadrados[`${i}`].innerHTML)
+            for (var i = 0; i < arrayCuadrados.length; i++) {
+                storage.setItem(`letra${i}`, arrayCuadrados[`${i}`].innerHTML)
             }
         }
 
-        function recuperarPalabras(){
+        function recuperarPalabras() {
 
-            for(var i=0;i<arrayCuadrados.length;i++){
+            for (var i = 0; i < arrayCuadrados.length; i++) {
                 var letra = storage.getItem(`letra${i}`);
-                if(letra.length>0){
-                    arrayCuadrados[`${i}`].innerHTML=letra
-                }else{
-                    arrayCuadrados[`${i}`].innerHTML=""
+                if (letra.length > 0) {
+                    arrayCuadrados[`${i}`].innerHTML = letra
+                } else {
+                    arrayCuadrados[`${i}`].innerHTML = ""
                 }
             }
 
@@ -549,8 +576,8 @@
             myFunctionDictionaryAbajo();
 
         }
-    
-        function borrarPalabras(){
+
+        function borrarPalabras() {
             storage.clear();
         }
 
@@ -566,17 +593,129 @@
 
         }
 
+        var cont=1;
+
         function ofrecerPistas() {
-            if (arrayCuadradosPista[0].innerHTML.length > 0 || arrayCuadradosPista[1].innerHTML.length > 0 || arrayCuadradosPista[2].innerHTML.length > 0 || arrayCuadradosPista[3].innerHTML.length > 0 || arrayCuadradosPista[4].innerHTML.length > 0) {
-                document.getElementsByClassName("textoPistas")[0].style.visibility = "hidden";
-                tratarArray();
+
+            console.log("el contador esta a "+cont)
+
+            var letrasPistaString = [];
+
+            for (let i = 0; i < arrayCuadradosPista.length; i++) {
+
+                if (arrayCuadradosPista[i].innerHTML.length > 0) {
+                    letrasPistaString.push(arrayCuadradosPista[i].innerHTML);
+                }
+
             }
 
+            if (letrasPistaString.length > 0) {
+                var modal = document.getElementById("myModal");
+                var btn = document.getElementById("myBtn");
+                var span = document.getElementsByClassName("close")[0];
+                modal.style.display = "block";
+
+                span.onclick = function () {
+                    modal.style.display = "none";
+                }
+                leerDiccionario(letrasPistaString,cont);
+            }
+            if(letrasPistaString.length>0){
+                cont++;
+            }
         }
-        function tratarArray() {
-            var stringPista = arrayCuadradosPista[0].innerHTML + arrayCuadradosPista[1].innerHTML + arrayCuadradosPista[2].innerHTML + arrayCuadradosPista[3].innerHTML + arrayCuadradosPista[4].innerHTML;
-            console.log(stringPista);
-            console.log(typeof (stringPista));
+
+
+        function leerDiccionario(letrasPistaString, cont) {
+
+
+            function fetchData() {
+                return fetch('https://ordenalfabetix.unileon.es/aw/diccionario.txt')
+                    .then(response =>
+                        response.text().then(text => text.split(/\r|\n/)));
+
+            }
+
+            fetchData().then(arr => tratarString(arr, letrasPistaString, cont));
+
+
+        }
+
+        function tratarString(arr, letrasPistaString, cont) {
+
+            for (let i = 0; i < arr.length; i++) {
+
+                //comprueba si existe la paalabra en el diccionario y la escribe sola
+                if (letrasPistaString.length == 6) {
+                    if (arr[i].includes(letrasPistaString.join("")) && arr[i].length == 6) {
+                        var node = document.createElement("p");
+                        var textnode = document.createTextNode(arr[i]);
+                        node.appendChild(textnode);
+                        document.getElementById("contenedorPalabrasPista").appendChild(node);
+                    }
+
+                } else if (letrasPistaString.length == 5) {
+                    if (arr[i].includes(letrasPistaString[0]) && arr[i].includes(letrasPistaString[1]) && arr[i].includes(letrasPistaString[2]) && arr[i].includes(letrasPistaString[3]) && arr[i].includes(letrasPistaString[4]) && (arr[i].length == 6)) {
+                        var node = document.createElement("p");
+                        var textnode = document.createTextNode(arr[i]);
+                        node.appendChild(textnode);
+                        document.getElementById("contenedorPalabrasPista").appendChild(node);
+                    }
+                } else if (letrasPistaString.length == 4) {
+                    if (arr[i].includes(letrasPistaString[0]) && arr[i].includes(letrasPistaString[1]) && arr[i].includes(letrasPistaString[2]) && arr[i].includes(letrasPistaString[3]) && (arr[i].length == 4 || arr[i].length == 6)) {
+                        var node = document.createElement("p");
+                        var textnode = document.createTextNode(arr[i]);
+                        node.appendChild(textnode);
+                        document.getElementById("contenedorPalabrasPista").appendChild(node);
+                    }
+                } else if (letrasPistaString.length == 3) {
+                    if (arr[i].includes(letrasPistaString[0]) && arr[i].includes(letrasPistaString[1]) && arr[i].includes(letrasPistaString[2]) && (arr[i].length == 4 || arr[i].length == 6)) {
+                        var node = document.createElement("p");
+                        var textnode = document.createTextNode(arr[i]);
+                        node.appendChild(textnode);
+                        document.getElementById("contenedorPalabrasPista").appendChild(node);
+                    }
+                } else if (letrasPistaString.length == 2) {
+                    if (arr[i].includes(letrasPistaString[0]) && arr[i].includes(letrasPistaString[1]) && (arr[i].length == 4 || arr[i].length == 6)) {
+                        var node = document.createElement("p");
+                        var textnode = document.createTextNode(arr[i]);
+                        node.appendChild(textnode);
+                        document.getElementById("contenedorPalabrasPista").appendChild(node);
+                    }
+                } else if (letrasPistaString.length == 1) {
+                    if (arr[i].includes(letrasPistaString[0]) && (arr[i].length == 4 || arr[i].length == 6)) {
+                        var node = document.createElement("p");
+                        var textnode = document.createTextNode(arr[i]);
+                        node.appendChild(textnode);
+                        document.getElementById("contenedorPalabrasPista").appendChild(node);
+                    }
+
+                }
+            }
+            var modal = document.getElementById("myModal");
+
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                        modal.style.display = "none";
+                        
+                        if(cont==1){
+                            document.getElementById("contadorPistas").innerHTML="1/3"
+                        }else if(cont==2){
+                            document.getElementById("contadorPistas").innerHTML="2/3"
+                        }else if(cont==3){
+                            document.getElementById("contadorPistas").innerHTML="3/3"
+                            document.getElementById("myBtn").disabled=true;
+
+                        }
+                        
+                    }
+                if (event.target == modal) {
+                    const myNode = document.getElementById("contenedorPalabrasPista");
+                    while (myNode.firstChild) {
+                        myNode.removeChild(myNode.lastChild);
+                    }
+                }
+            }
         }
 
         function escribirTextoPista() {
@@ -595,7 +734,7 @@
         }
 
 
-    //TODO function guardarSesion()
+
     </script>
 
 

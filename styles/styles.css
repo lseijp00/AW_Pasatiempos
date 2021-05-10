@@ -1,409 +1,491 @@
 body {
-    background-color: blanchedalmond;
-    font-family: 'Gilroy-Regular', sans-serif;
-}
-
-#my{
-    zoom: 75%;
-}
-
-.botonGuardarPalarbas{
-    font-family: 'Gilroy-Regular', sans-serif;
-    position: absolute;
-    top: 60%;
-    left: 12%;
-    width:15rem;
-    transform: translate(-50%, -50%);
-    background-color: #b3cdd1;
-    background-image: linear-gradient(315deg, #b3cdd1 0%, #9fa4c4 74%);
-    border:none;
-    padding:1rem;
-    border-radius: 2rem;
-    font-size: 20px;
-    text-align: center;
-    font-weight: bold;
-    
-}
-.botonGuardarPalarbas:hover{
-    font-size: 22px;
-    width:17rem;
-    cursor:pointer;
-}
-
-.botonRecuperarPalabras{
-    font-family: 'Gilroy-Regular', sans-serif;
-    position: absolute;
-    top: 70%;
-    left: 12%;
-    width:15rem;
-    border:none;
-    transform: translate(-50%, -50%);
-    background-color: #b3cdd1;
-    background-image: linear-gradient(315deg, #b3cdd1 0%, #9fa4c4 74%);
-    padding:1rem;
-    border-radius: 2rem;
-    font-size: 20px;
-    text-align: center;
-    font-weight: bold;
-}
-.botonRecuperarPalabras:hover{
-    font-size: 22px;
-    width:17rem;
-    cursor:pointer;
-}
-.botonRecuperarPalabras:active{
-    font-size: 22px;
-    border:1px solid black;
-    width:17rem;
-    cursor:pointer;
-}
-
-.borrarGuardado{
-    font-weight: bold;
-    font-family: 'Gilroy-Regular', sans-serif;
-    color:tomato;
-    position: absolute;
-    top: 80%;
-    left: 18%;
-    width:12rem;
-    background-color: transparent;
-    border:tomato solid 1px;
-    transform: translate(-50%, -50%);
-    padding:1rem;
-    border-radius: 2rem;
-    font-size: 20px;
-    text-align: center;
-}
-.borrarGuardado:hover{
-    font-size: 22px;
-    width:14rem;
-    cursor:pointer;
-    background-color: #f71735;
-    background-image: linear-gradient(147deg, #f71735 0%, #db3445 74%);
-    color:white;
-}
-
-.explicacion{
-    position: absolute;
-    top: 32%;
-    left: 12%;
-    width:24rem;
-    transform: translate(-50%, -50%);
-    padding:1rem;
-    border-radius: 1rem;
-    font-size: 23px;
-    text-align: start;
-    
-}
-
-.center{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #b3cdd1;
-    background-image: linear-gradient(315deg, #b3cdd1 0%, #9fa4c4 74%);
-    padding:1rem;
-    border-radius: 2rem;
-}
-    #tituloPasatiempos{
-        font-size: 50px;
-        margin-left:3rem;
-    }
-
-.pistas{
-    position: absolute;
-    width:350px;
-    top: 32%;
-    left: 88%;
-    transform: translate(-50%, -50%);
-    background-color:transparent;
-    text-align:end;
-
-}
-
-.linea{
-    width:1000px;
-    height:10px;
-    background-color: rgb(204, 194, 194);
-}
-
-.pasatiempos{
-    margin: 3rem;
-    padding:3rem;
-    background-color:rgb(170, 166, 166);
-    border-radius: 1rem;
-}
-
-.bloquePequeño{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.bloqueGrande{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left:6.25rem;
-}
-
-.fila{
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
-    width:300px;
-    height:50px;
-}
-
-
-
-.cuadroPequeño{
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
-    background-color: black;
-    text-align: center;
-    align-items: center;
-    font-size:33px;
-    margin:5px;
-    width:40px;
-    height:40px;
-    background-color: transparent;
-    outline:solid rgb(61, 55, 55);
-}
-
-
-
-    #check1{
-        position:absolute;
-        top:27%;
-        left:35%;
-        font-size:28px;
-        font-weight:bolder;
-        color:rgb(82, 82, 212);
-        visibility:hidden;
-    }
-    #check2{
-        position:absolute;
-        top:32.5%;
-        left:35%;
-        font-size:28px;
-        font-weight:bolder;
-        color:rgb(82, 82, 212);
-        visibility:hidden;
-
-    }
-    #check3{
-        position:absolute;
-        top:37.5%;
-        left:35%;
-        font-size:28px;
-        font-weight:bolder;
-        color:rgb(82, 82, 212);
-        visibility:hidden;
-
-    }
-    #check4{
-        position:absolute;
-        top:43%;
-        left:35%;
-        font-size:28px;
-        font-weight:bolder;
-        color:rgb(82, 82, 212);
-        visibility:hidden;
-
-    }
-    #check5{
-        position:absolute;
-        top:48%;
-        left:35%;
-        font-size:28px;
-        font-weight:bolder;
-        color:rgb(82, 82, 212);
-        visibility:hidden;
-
-    }
-    #check6{
-        position:absolute;
-        top:53%;
-        left:35%;
-        font-size:28px;
-        font-weight:bolder;
-        color:rgb(82, 82, 212);
-        visibility:hidden;
-
-    }
-    #check7{
-        position:absolute;
-        top:58.5%;
-        left:71%;
-        font-size:28px;
-        font-weight:bolder;
-        color:rgb(82, 82, 212);
-        visibility:hidden;
-
-    }
-    #check8{
-        position:absolute;
-        top:63.5%;
-        left:71%;
-        font-size:28px;
-        font-weight:bolder;
-        color:rgb(82, 82, 212);
-        visibility:hidden;
-    }
-
-    #check9{
-        position:absolute;
-        top:69%;
-        left:71%;
-        font-size:28px;
-        font-weight:bolder;
-        color:rgb(82, 82, 212);
-        visibility:hidden;
-
-    }
-    #check10{
-        position:absolute;
-        top:74%;
-        left:71%;
-        font-size:28px;
-        font-weight:bolder;
-        color:rgb(82, 82, 212);
-        visibility:hidden;
-
-    }
-    #check11{
-        position:absolute;
-        top:79%;
-        left:71%;
-        font-size:28px;
-        font-weight:bolder;
-        color:rgb(82, 82, 212);
-        visibility:hidden;
-
-    }
-    #check12{
-        position:absolute;
-        top:84%;
-        left:71%;
-        font-size:28px;
-        font-weight:bolder;
-        color:rgb(82, 82, 212);
-        visibility:hidden;
-
-    }
-
-        
-
-    #alerta{
-        color:red;
-        position:absolute;
-        font-size: 25px;
-        top:100%;
-        text-align: center;
-        border: 1px solid red;
-        border-radius: 3rem;
+  background-color: blanchedalmond;
+  font-family: "Gilroy-Regular", sans-serif;
   
-    }
-    
-    
-
-
-    #numero1{
-        position:absolute;
-        top:27%;
-        left:60.5%;
-        font-size:28px;
-    }
-    #numero2{
-        position:absolute;
-        top:53%;
-        left:60.5%;
-        font-size:28px;
-    }
-    #numero3{
-        position:absolute;
-        top:58%;
-        left:38%;
-        font-size:28px;
-    }
-    #numero4{
-        position:absolute;
-        top:84%;
-        left:38%;
-        font-size:28px;
-    }
-
-.pedirPistas{
-    position:absolute;
-    
-    top: 63%;
-    left: 30%;
 }
 
-    .pedirPistas #botonPedirPistas{
-        
-        font-weight: bold;
-        border:none;
-        background:none;
-        font-size:25px;
-        font-family: 'Gilroy-Regular', sans-serif;
-        text-align: center;
-        color:red;
-        border:2px solid;
-        padding:2rem;
-        border-radius: 2rem;
-    }
-    .pedirPistas #botonPedirPistas:hover{
-        color:white;
-        cursor:pointer;
-        background-color: #f71735;
-        background-image: linear-gradient(147deg, #f71735 0%, #db3445 74%);
-    }
+#my {
+  zoom: 75%;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 
-.cuadrosPistas{
-    display:flex;
-    margin-top: 4rem;
-    margin-bottom: 2rem;
-    justify-content: flex-end;
+.botonGuardarPalarbas {
+  font-family: "Gilroy-Regular", sans-serif;
+  position: absolute;
+  top: 60%;
+  left: 12%;
+  width: 15rem;
+  transform: translate(-50%, -50%);
+  background-color: #b3cdd1;
+  background-image: linear-gradient(315deg, #b3cdd1 0%, #9fa4c4 74%);
+  border: none;
+  padding: 1rem;
+  border-radius: 2rem;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+.botonGuardarPalarbas:hover {
+  font-size: 22px;
+  width: 17rem;
+  cursor: pointer;
 }
 
-.cuadrosPistas div{
-    margin-left:2rem;
-    outline-color:rgb(82, 82, 212);
+.botonRecuperarPalabras {
+  font-family: "Gilroy-Regular", sans-serif;
+  position: absolute;
+  top: 70%;
+  left: 12%;
+  width: 15rem;
+  border: none;
+  transform: translate(-50%, -50%);
+  background-color: #b3cdd1;
+  background-image: linear-gradient(315deg, #b3cdd1 0%, #9fa4c4 74%);
+  padding: 1rem;
+  border-radius: 2rem;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+.botonRecuperarPalabras:hover {
+  font-size: 22px;
+  width: 17rem;
+  cursor: pointer;
+}
+.botonRecuperarPalabras:active {
+  font-size: 22px;
+  border: 1px solid black;
+  width: 17rem;
+  cursor: pointer;
 }
 
-.botonCerrarPistas{
-    font-size: 2rem;
-    border: none;
-    background: none;
+.borrarGuardado {
+  font-weight: bold;
+  font-family: "Gilroy-Regular", sans-serif;
+  color: tomato;
+  position: absolute;
+  top: 80%;
+  left: 18%;
+  width: 12rem;
+  background-color: transparent;
+  border: tomato solid 1px;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  border-radius: 2rem;
+  font-size: 20px;
+  text-align: center;
 }
 
-.botonCerrarPistas:hover{
-    cursor: pointer;
-    color:red;
+.borrarGuardado:hover {
+  font-size: 22px;
+  width: 14rem;
+  cursor: pointer;
+  background-color: tomato;
+  color: white;
 }
 
-.textoPistas{
-    text-align: center;
-    font-size: 23px;
+.explicacion {
+  position: absolute;
+  top: 32%;
+  left: 12%;
+  width: 24rem;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: 23px;
+  text-align: start;
 }
 
-.aceptarPistas{
-    border:solid 2px rgb(82, 82, 212);
-    color:rgb(82, 82, 212);
-    font-weight: bold;
-    border-radius: 2rem;
-    padding:1rem;
-    font-size: 23px;
-    font-family: 'Gilroy-Regular', sans-serif;
-    background: none;
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #b3cdd1;
+  background-image: linear-gradient(315deg, #b3cdd1 0%, #9fa4c4 74%);
+  padding: 1rem;
+  border-radius: 2rem;
 }
-.aceptarPistas:hover{
-    color:white;
-    background-color: #b3cdd1;
-    background-image: linear-gradient(315deg, #b3cdd1 0%, #9fa4c4 74%);
-    cursor:pointer;
+#tituloPasatiempos {
+  font-size: 50px;
+  margin-left: 3rem;
+}
+
+.pistas {
+  position: absolute;
+  width: 350px;
+  top: 32%;
+  left: 88%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  text-align: end;
+}
+
+.linea {
+  width: 1000px;
+  height: 10px;
+  background-color: rgb(204, 194, 194);
+}
+
+.pasatiempos {
+  margin: 3rem;
+  padding: 3rem;
+  background-color: rgb(170, 166, 166);
+  border-radius: 1rem;
+}
+
+.bloquePequeño {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bloqueGrande {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 6.25rem;
+}
+
+.fila {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 300px;
+  height: 50px;
+}
+
+.cuadroPequeño {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: black;
+  text-align: center;
+  align-items: center;
+  font-size: 33px;
+  margin: 5px;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  outline: solid rgb(61, 55, 55);
+}
+
+#check1 {
+  position: absolute;
+  top: 27%;
+  left: 35%;
+  font-size: 28px;
+  font-weight: bolder;
+  color: rgb(82, 82, 212);
+  visibility: hidden;
+}
+#check2 {
+  position: absolute;
+  top: 32.5%;
+  left: 35%;
+  font-size: 28px;
+  font-weight: bolder;
+  color: rgb(82, 82, 212);
+  visibility: hidden;
+}
+#check3 {
+  position: absolute;
+  top: 37.5%;
+  left: 35%;
+  font-size: 28px;
+  font-weight: bolder;
+  color: rgb(82, 82, 212);
+  visibility: hidden;
+}
+#check4 {
+  position: absolute;
+  top: 43%;
+  left: 35%;
+  font-size: 28px;
+  font-weight: bolder;
+  color: rgb(82, 82, 212);
+  visibility: hidden;
+}
+#check5 {
+  position: absolute;
+  top: 48%;
+  left: 35%;
+  font-size: 28px;
+  font-weight: bolder;
+  color: rgb(82, 82, 212);
+  visibility: hidden;
+}
+#check6 {
+  position: absolute;
+  top: 53%;
+  left: 35%;
+  font-size: 28px;
+  font-weight: bolder;
+  color: rgb(82, 82, 212);
+  visibility: hidden;
+}
+#check7 {
+  position: absolute;
+  top: 58.5%;
+  left: 71%;
+  font-size: 28px;
+  font-weight: bolder;
+  color: rgb(82, 82, 212);
+  visibility: hidden;
+}
+#check8 {
+  position: absolute;
+  top: 63.5%;
+  left: 71%;
+  font-size: 28px;
+  font-weight: bolder;
+  color: rgb(82, 82, 212);
+  visibility: hidden;
+}
+
+#check9 {
+  position: absolute;
+  top: 69%;
+  left: 71%;
+  font-size: 28px;
+  font-weight: bolder;
+  color: rgb(82, 82, 212);
+  visibility: hidden;
+}
+#check10 {
+  position: absolute;
+  top: 74%;
+  left: 71%;
+  font-size: 28px;
+  font-weight: bolder;
+  color: rgb(82, 82, 212);
+  visibility: hidden;
+}
+#check11 {
+  position: absolute;
+  top: 79%;
+  left: 71%;
+  font-size: 28px;
+  font-weight: bolder;
+  color: rgb(82, 82, 212);
+  visibility: hidden;
+}
+#check12 {
+  position: absolute;
+  top: 84%;
+  left: 71%;
+  font-size: 28px;
+  font-weight: bolder;
+  color: rgb(82, 82, 212);
+  visibility: hidden;
+}
+
+#alerta {
+  color: red;
+  position: absolute;
+  font-size: 25px;
+  top: 100%;
+  text-align: center;
+  border: 1px solid red;
+  border-radius: 3rem;
+}
+
+#numero1 {
+  position: absolute;
+  top: 27%;
+  left: 60.5%;
+  font-size: 28px;
+}
+#numero2 {
+  position: absolute;
+  top: 53%;
+  left: 60.5%;
+  font-size: 28px;
+}
+#numero3 {
+  position: absolute;
+  top: 58%;
+  left: 38%;
+  font-size: 28px;
+}
+#numero4 {
+  position: absolute;
+  top: 84%;
+  left: 38%;
+  font-size: 28px;
+}
+
+.pedirPistas {
+  position: absolute;
+
+  top: 63%;
+  left: 30%;
+}
+
+.pedirPistas #botonPedirPistas {
+  font-weight: bold;
+  border: none;
+  background: none;
+  font-size: 25px;
+  font-family: "Gilroy-Regular", sans-serif;
+  text-align: center;
+  color: red;
+  border: 2px solid;
+  padding: 2rem;
+  border-radius: 2rem;
+}
+.pedirPistas #botonPedirPistas:hover {
+  color: white;
+  cursor: pointer;
+  background-color: tomato;
+}
+
+.cuadrosPistas {
+  display: flex;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  justify-content: flex-end;
+}
+
+.cuadrosPistas div {
+  margin-left: 1rem;
+  outline-color: rgb(82, 82, 212);
+}
+
+.botonCerrarPistas {
+  font-size: 2rem;
+  border: none;
+  background: none;
+}
+
+.botonCerrarPistas:hover {
+  cursor: pointer;
+  color: red;
+}
+
+.textoPistas {
+  text-align: center;
+  font-size: 23px;
+}
+
+.aceptarPistas {
+  border: solid 2px rgb(82, 82, 212);
+  color: rgb(82, 82, 212);
+  font-weight: bold;
+  border-radius: 2rem;
+  padding: 1rem;
+  font-size: 23px;
+  font-family: "Gilroy-Regular", sans-serif;
+  background: none;
+}
+.aceptarPistas:hover {
+  color: white;
+  background-color: #b3cdd1;
+  background-image: linear-gradient(315deg, #b3cdd1 0%, #9fa4c4 74%);
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 10%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content/Box */
+.modal-content {
+  border-radius: 2.3rem;
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  width: 30%;
+  height: 40%;
+  animation-name: modal;
+  animation-duration: 0.7s;
+  -webkit-box-shadow: 13px 10px 14px 5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 13px 10px 14px 5px rgba(0, 0, 0, 0.75);
+  box-shadow: 13px 10px 14px 5px rgba(0, 0, 0, 0.75);
+}
+
+.modal-content h2 {
+color:black;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  border-bottom: none;
+
+  padding: 2rem;
+  background-color: tomato;
+}
+
+#contenedorPalabrasPista p {
+    text-align:center;
+    font-size: 25px;
+  }
+
+#contenedorPalabrasPista{
+    overflow:auto;
+    height:65%;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+@keyframes modal {
+  from {
+    top: -330px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/* The Close Button */
+.close {
+  margin-top: 1rem;
+  margin-right: 2rem;
+  color: black;
+  float: right;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+#myBtn:disabled,
+#myBtn[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  opacity: 70%;
+  color: #666666;
 }
